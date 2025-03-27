@@ -1,1 +1,11 @@
-<p>profile-card works!</p>
+<div>
+  <img src="user.picture.large" alt="User photo" class="avatar">
+  <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+  <p>{{ user.location.city }}, {{ user.location.country }}</p>
+
+  <div class="info">
+    <p><strong>Email:</strong> {{ user.email }} </p>
+    <p><strong>Phone:</strong> {{ user.phone }} </p>
+    <p><strong>Birthday:</strong> {{ user.dob.date | date: 'longDate' }} </p>
+  </div>
+</div>
