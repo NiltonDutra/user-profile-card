@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './profile-card.component.html',
-  styleUrl: './profile-card.component.scss'
+  styleUrls: ['./profile-card.component.scss']
 })
 export class ProfileCardComponent implements OnInit {
   user: any;
@@ -18,6 +18,7 @@ export class ProfileCardComponent implements OnInit {
   ngOnInit(): void {
       this.userService.getUser().subscribe((data: any) => {
         this.user = data.results[0]
+        console.log('Usuário carregado:', this.user);
       });
   }
 }
