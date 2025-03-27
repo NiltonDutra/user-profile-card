@@ -1,1 +1,11 @@
-<p>tabs works!</p>
+<div class="tabs">
+  <button (click)="selectTab('friend')" [class.active]="activeTab === 'friend'">Friends</button>
+  <button (click)="selectTab('location')" [class.active]="activeTab === 'location'">Location</button>
+  <button (click)="selectTab('contact')" [class.active]="activeTab === 'contact'">Contact</button>
+</div>
+
+<div class="tab-content">
+  <app-friends-list *ngIf="activeTab === 'friends'"></app-friends-list>
+  <app-map *ngIf="activeTab === 'location'"></app-map>"
+  <p *ngIf="activeTab === 'contact'">[Form will be here]</p>
+</div>

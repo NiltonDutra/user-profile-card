@@ -9,7 +9,7 @@ export class UserService {
 
   private baseUrl = 'http://randomuser.me/api/'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getUser(): Observable<any> {
     return this.http.get(this.baseUrl);
