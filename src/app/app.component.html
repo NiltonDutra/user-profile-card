@@ -1,7 +1,7 @@
 <!-- Root of the app -->
 <div class="container">
-  <app-profile-card></app-profile-card>
+  <app-profile-card (locationChanged)="onLocationChange($event)"></app-profile-card>
   <app-tabs></app-tabs>
   <app-friends-list></app-friends-list>
-  <app-map></app-map>
+  <app-map [location]="location"></app-map>
 </div>

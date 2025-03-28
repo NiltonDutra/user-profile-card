@@ -11,11 +11,18 @@ import { MapComponent } from './components/map/map.component';
     ProfileCardComponent,
     FriendsListComponent,
     TabsComponent,
-    MapComponent
+    MapComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'user-profile-card';
+
+  location: string = '';
+
+  onLocationChange(newLocation: string) {
+    this.location = newLocation;
+    console.log('Location appComponent', this.location);
+  }
 }

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private baseUrl = 'http://randomuser.me/api/'
+  private baseUrl = 'https://randomuser.me/api/'
 
   constructor(private http: HttpClient) {}
 
