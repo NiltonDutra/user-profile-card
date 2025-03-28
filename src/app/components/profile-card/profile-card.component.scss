@@ -1,20 +1,122 @@
-.card {
+.profile-card {
   background: white;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 400px;
-  margin: 2rem auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 2rem;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.avatar {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+.gradient-banner {
+  background: linear-gradient(to right, #282bc4e0, #7700bcb9);
+  height: 100px;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 0.6rem;
 }
 
-.info {
-  margin-top: 1rem;
-  font-size: 0.95rem;
+
+.avatar-container {
+  display: flex;
+  justify-content: left;
+  padding-left: 3rem;
+  margin-top: -70px;
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    background-color: white;
+  }
+}
+
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .text-info {
+    margin-left: 2rem; // ou 16px, 20px, etc.
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 0 0 0.4rem;
+    }
+
+    p {
+      color: #777;
+      font-size: 0.95rem;
+    }
+  }
+
+  .button-container {
+    .connect-btn {
+      margin-right: 2rem;
+      background: #4a6cf7;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.4rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+      transition: background 0.2s ease;
+
+
+      &:hover {
+        background: #3b5bdb;
+      }
+    }
+  }
+}
+
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.2rem 2rem;
+
+  .info-card {
+    background: #f5f7fa;
+    border-radius: 1rem;
+    padding: 1rem 1.4rem;
+    min-width: 200px;
+    max-width: 260px;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    .icon {
+      font-size: 1.6rem;
+      color: #5e60ce;
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      margin: 0;
+      font-weight: 600;
+      color: #333;
+    }
+
+    p {
+      margin: 0.2rem 0 0;
+      font-size: 0.85rem;
+      color: #555;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
 }

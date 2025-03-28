@@ -16,7 +16,7 @@ lef: any;
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-      this.userService.getUsersList(8).subscribe((data: any) => {
+      this.userService.getUsersList(6).subscribe((data: any) => {
         this.friends = data.results;
       });
   }

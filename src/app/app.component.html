@@ -1,7 +1,9 @@
-<!-- Root of the app -->
+<!-- Root container of the application -->
 <div class="container">
+  <!-- Main user profile card. Emits location (city, country) to parent component -->
   <app-profile-card (locationChanged)="onLocationChange($event)"></app-profile-card>
-  <app-tabs></app-tabs>
-  <app-friends-list></app-friends-list>
-  <app-map [location]="location"></app-map>
+
+  <!-- Tab navigation with dynamic content (Friends, Location, Contact) -->
+  <!-- Receives location from parent component to show in the map -->
+  <app-tabs [location]="location"></app-tabs>
 </div>

@@ -1,11 +1,44 @@
-<div *ngIf="user" class="card">
-  <img [src]="user.picture?.large" alt="User photo" class="avatar" />
-  <h2>{{ user.name?.first }} {{ user.name?.last }}</h2>
-  <p>{{ user.location?.city }}, {{ user.location?.country }}</p>
+<div class="profile-card">
 
-  <div class="info">
-    <p><strong>Email:</strong> {{ user.email }}</p>
-    <p><strong>Phone:</strong> {{ user.phone }}</p>
-    <p><strong>Birthday:</strong> {{ user.dob?.date | date: 'longDate' }}</p>
+  <div class="gradient-banner"></div>
+
+
+  <div class="avatar-container">
+    <img [src]="user?.picture.large" alt="User photo" class="avatar" />
+  </div>
+
+
+  <div class="header-content">
+    <div class="text-info">
+      <h2>{{ user?.name.first }} {{ user?.name.last }}</h2>
+      <p>{{ user?.location.city }}, {{ user?.location.country }}</p>
+    </div>
+
+    <div class="button-container">
+      <button class="connect-btn">👤 Connect</button>
+    </div>
+  </div>
+
+  <div class="info-cards">
+    <div class="info-card">
+      <span class="icon">📧</span>
+      <div>
+        <p>{{ user?.email }}</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <span class="icon">📞</span> 
+      <div>
+        <p>{{ user?.phone }}</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <span class="icon">🎂</span>
+      <div>
+        <p>{{ user?.dob.date | date: 'longDate' }}</p>
+      </div>
+    </div>
   </div>
 </div>

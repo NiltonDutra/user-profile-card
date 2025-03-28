@@ -1,11 +1,33 @@
 <div class="tabs">
-  <button (click)="selectTab('friend')" [class.active]="activeTab === 'friend'">Friends</button>
-  <button (click)="selectTab('location')" [class.active]="activeTab === 'location'">Location</button>
-  <button (click)="selectTab('contact')" [class.active]="activeTab === 'contact'">Contact</button>
+  <button
+    class="tab-btn"
+    (click)="selectTab('friends')"
+    [class.active]="activeTab === 'friends'">
+    👥 <span>Friends</span>
+  </button>
+
+  <button
+    class="tab-btn"
+    (click)="selectTab('location')"
+    [class.active]="activeTab === 'location'">
+    📍 <span>Location</span>
+  </button>
+
+  <button
+    class="tab-btn"
+    (click)="selectTab('contact')"
+    [class.active]="activeTab === 'contact'">
+    ✉️ <span>Contact</span>
+  </button>
 </div>
 
 <div class="tab-content">
+  <!-- Shows the FriendsListComponent when tab is 'friends' -->
   <app-friends-list *ngIf="activeTab === 'friends'"></app-friends-list>
-  <app-map *ngIf="activeTab === 'location'"></app-map>"
-  <p *ngIf="activeTab === 'contact'">[Form will be here]</p>
+
+  <!-- Shows the MapComponent when tab is 'location' -->
+  <app-map *ngIf="activeTab === 'location'" [location]="location"></app-map>
+
+  <!-- Shows the ContactFormComponent when tab is 'contact' -->
+  <app-contact-form *ngIf="activeTab === 'contact'"></app-contact-form>
 </div>

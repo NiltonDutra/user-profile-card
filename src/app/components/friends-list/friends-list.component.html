@@ -1,11 +1,9 @@
-<div class="friends-list" *ngIf="friends.length">
+<div class="friends-list">
   <div class="friend-card" *ngFor="let friend of friends">
-    <img [src]="friend['picture']['thumbnail']" alt="Friend photo" />
-    <div class="info">
-      <p>
-        <strong>{{ friend["name"]["first"] }} {{ friend["name"]["last"] }}</strong>
-      </p>
-      <p>{{ friend["location"]["country"] }}</p>
+    <img [src]="friend.picture.thumbnail" alt="Friend photo" />
+    <div class="friend-info">
+      <p class="name">{{ friend.name.first }} {{ friend.name.last }}</p>
+      <p class="location">{{ friend.location.country }}</p>
     </div>
   </div>
 </div>
