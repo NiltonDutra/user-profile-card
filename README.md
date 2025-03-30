@@ -2,7 +2,11 @@
 
 This project built with Angular, showcasing an interactive user profile card with data fetched from an external API. The UI is inspired by a clean and modern mockup, displaying user details like name, contact, location, birthday, and friends.
 
-foto
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/144512e7-5023-41b8-80ca-83c28a5419f2" width="300"/>
+  <img src="https://github.com/user-attachments/assets/dffe23ca-7aba-4b96-86ce-1704a3fa7b7a" width="300"/>
+  <img src="https://github.com/user-attachments/assets/f5f441bb-1f90-442f-a985-a54949959754" width="300"/>
+</p>
 
 ---
 
